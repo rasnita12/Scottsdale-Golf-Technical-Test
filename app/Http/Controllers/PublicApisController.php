@@ -25,4 +25,15 @@ class PublicApisController extends Controller
         $data = $response->json();
         return Inertia::render('Dashboard', ['data' => $data]);
     }
+
+    /**
+     * List of categories from public APIs
+     * @return Response
+     */
+    public function categories(): Response
+    {
+        $response = Http::get("$this->url/categories");
+        $data = $response->json();
+        return Inertia::render('Category', ['data' => $data]);
+    }
 }

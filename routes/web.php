@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicApisController::class, 'index']);
+Route::get('/categories', [PublicApisController::class,'categories']);

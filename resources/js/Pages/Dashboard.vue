@@ -8,6 +8,7 @@
         </div>
 
         <div class="mt-5">
+            <NavLink :href="'/categories'" class="float-right mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 py-1 text-sm rounded" :active='true'>Categories</NavLink>
             <table class="w-full border">
                 <thead>
                     <tr>
@@ -38,7 +39,11 @@
 
 <script>
 import { Head, Link } from "@inertiajs/vue3";
+import NavLink from "../Components/NavLink.vue"
 export default {
+    components: {
+        NavLink
+    },
     props: {
         data: Object,
     }
